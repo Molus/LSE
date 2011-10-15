@@ -1,0 +1,26 @@
+
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameEngine", "GameEngine\GameEngine.csproj", "{35F31F8D-7691-43FF-B5C9-62DCF175DC37}"
+EndProject
+Project("{2857B73E-F847-4B02-9238-064979017E93}") = "Bindings", "Bindings\Bindings.cproj", "{0E25B435-799F-4987-BF4B-A1F3C9871F80}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E25B435-799F-4987-BF4B-A1F3C9871F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E25B435-799F-4987-BF4B-A1F3C9871F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E25B435-799F-4987-BF4B-A1F3C9871F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E25B435-799F-4987-BF4B-A1F3C9871F80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35F31F8D-7691-43FF-B5C9-62DCF175DC37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F31F8D-7691-43FF-B5C9-62DCF175DC37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F31F8D-7691-43FF-B5C9-62DCF175DC37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35F31F8D-7691-43FF-B5C9-62DCF175DC37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Wrappers\GameEngine.csproj
+	EndGlobalSection
+EndGlobal
