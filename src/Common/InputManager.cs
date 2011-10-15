@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
-using GameEngine.Bindings;
 
-namespace GameEngine.Managers
+namespace GameEngine
 {
 	public class InputManager
 	{	

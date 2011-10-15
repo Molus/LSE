@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace GameEngine.Graphics
+namespace GameEngine
 {	
 	public struct TextureInfo
 	{
@@ -18,7 +18,7 @@ namespace GameEngine.Graphics
 		}
 	}	
 	
-	public class TextureLoader
+	internal class TextureLoader
 	{	
 		#region Public Methods
 		

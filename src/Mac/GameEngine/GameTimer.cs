@@ -1,9 +1,9 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace GameEngine.Time
+namespace GameEngine
 {
-	public class GameTimer
+	internal class GameTimer
 	{
 		#region Public Methods
 		

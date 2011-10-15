@@ -1,16 +1,27 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace GameEngine.Graphics
+namespace GameEngine
 {
 	public class GraphicsDevice
 	{
+		#region Private Fields
+		
+		private bool isInitialized;
+		
+		#endregion
+		
 		#region Public Properties
 		
 		public bool IsWindowOpened
 		{
 			get 
 			{ 
+				if (!this.isInitialized)
+				{
+					return false;
+				}
+				
 				return Bindings.GetIsWindowOpened(); 
 			}
 		}
@@ -26,11 +37,23 @@ namespace GameEngine.Graphics
 		{		
 			this.ViewportWidth = width;
 			this.ViewportHeight = height;
+			this.isInitialized = Bindings.InitializeViewport(width, height, fullscreen);
 			
-			return Bindings.InitializeViewport(width, height, fullscreen);
+			return this.isInitialized;
+		}
+				
+		public void Cleanup()
+		{
+			Bindings.ReleaseViewport();
+			
+			this.isInitialized = false;
 		}
 		
-		public void DrawTexture(TextureInfo texture, float xPos, float yPos, float zPos, float rotation,
+		#endregion
+		
+		#region Internal Methods
+		
+		internal void DrawTexture(TextureInfo texture, float xPos, float yPos, float zPos, float rotation,
 			float texLeft, float texTop, float texRight, float texBottom, float width, float height)
 		{
 			Bindings.DrawTexture2D(
@@ -40,19 +63,14 @@ namespace GameEngine.Graphics
 				width, height);
 		}
 		
-		public void CleanView()
+		internal void CleanView()
 		{
 			Bindings.CleanBackBuffer();
 		}
 		
-		public void SwapView()
+		internal void SwapView()
 		{
 			Bindings.SwapBackBuffer();
-		}
-		
-		public void Cleanup()
-		{
-			Bindings.ReleaseViewport();
 		}
 		
 		#endregion
@@ -84,4 +102,3 @@ namespace GameEngine.Graphics
 		#endregion
 	}
 }
-

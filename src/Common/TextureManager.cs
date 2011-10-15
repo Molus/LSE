@@ -2,9 +2,8 @@ using System;
 using System.IO;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using GameEngine.Bindings;
 
-namespace GameEngine.Managers
+namespace GameEngine
 {
 	public class TextureManager
 	{	

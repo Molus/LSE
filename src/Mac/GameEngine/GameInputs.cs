@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
-namespace GameEngine.Inputs
+namespace GameEngine
 {
-	public class GameInputs
+	internal class GameInputs
 	{
 		#region Public Methods
 				

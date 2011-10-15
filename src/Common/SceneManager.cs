@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace GameEngine.Managers
+namespace GameEngine
 {
 	public class SceneManager
 	{
